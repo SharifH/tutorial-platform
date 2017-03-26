@@ -19,7 +19,26 @@ export default StyleSheet.create({
     },
     "header": {
         "backgroundColor": "#252121",
-        "height": "15%"
+        "height": 100
+    },
+    "nav": {
+        "display": "inline-block"
+    },
+    "nav li": {
+        "display": "inline-block",
+        "paddingTop": 0,
+        "paddingRight": 10,
+        "paddingBottom": 0,
+        "paddingLeft": 10,
+        "fontSize": 20,
+        "fontWeight": "bold"
+    },
+    "nav li a": {
+        "textDecoration": "none",
+        "color": "white"
+    },
+    "i": {
+        "color": "white"
     },
     "h2": {
         "textAlign": "center",
@@ -36,6 +55,27 @@ export default StyleSheet.create({
         "marginLeft": "auto"
     },
     "inner-box": {
-        "backgroundColor": "purple"
+        "backgroundColor": "purple",
+        "display": "inline-block",
+        "height": 250,
+        "width": 250
+    },
+    "outer-box": {
+        "display": "inline-block"
+    },
+    "intro": {
+        "backgroundColor": "#403a3a",
+        "color": "white",
+        "height": 300,
+        "display": "block",
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "marginTop": -20,
+        "marginRight": 0,
+        "marginBottom": -20,
+        "marginLeft": 0,
+        "position": "relative"
     }
 });

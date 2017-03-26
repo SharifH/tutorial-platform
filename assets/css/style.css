@@ -5,7 +5,23 @@ body{
 }
 header{
   background-color: #252121;
-  height: 15%;
+  height: 100px;
+}
+nav{
+  display: inline-block;
+}
+nav li{
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav li a{
+  text-decoration: none;
+  color: white;
+}
+i{
+  color: white;
 }
 h2{
   text-align: center;
@@ -20,4 +36,21 @@ h2{
 }
 .inner-box{
   background-color: purple;
+  display: inline-block;
+  height: 250px;
+  width: 250px;
+}
+.outer-box{
+
+  display: inline-block;
+  
+}
+#intro{
+  background-color: #403a3a;
+  color: white;
+  height: 300px;
+  display: block;
+  padding: 0;
+  margin: -20px 0px;
+  position: relative;
 }
