@@ -1,0 +1,23 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+header{
+  background-color: #252121;
+  height: 15%;
+}
+h2{
+  text-align: center;
+  font-weight: bold;
+}
+#collection{
+  background-color: #322e2d;
+}
+#row{
+  width: 80%;
+  margin: 0 auto;
+}
+.inner-box{
+  background-color: purple;
+}
