@@ -14,6 +14,7 @@
         }
          });
       
+      var editorValue= editor.getValue();
       // editor.on("change", function() {
       //   clearTimeout(delay);
       //   delay = setTimeout(updatePreview, 600);
@@ -27,5 +28,32 @@
         preview.open();
         preview.write(cdn+editor.getValue()+endcdn);
         preview.close();
+
+              console.log(editor.getValue());
+
       }
       setTimeout(updatePreview, 600);
+
+var experimentButton = document.getElementById('experimentButton');
+
+
+experimentButton.addEventListener('click', function(e) {
+
+// save a version
+  $.ajax({
+    type: "POST",
+    url: 'http://localhost:3000/api/experiment',
+    data: {
+      editorValue: editor.getValue(),
+
+    },
+    success: function(data) {
+      // THE ID IS NOT THERE!
+      // createVersion(data._id);
+      // // console.log(JSON.stringify(basicElements[0].getJSON()))
+      // console.log(data.id)
+
+    }
+
+  });
+});

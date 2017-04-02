@@ -1,0 +1,22 @@
+body{
+  background-color: black;
+}
+
+      editor {
+        float: left;
+        width: 100%;
+        height: 100vh;
+
+        border: 1px solid black;
+        background-color: black;
+
+
+      }
+      #previewEx {
+        width: 100%;
+        float: left;
+        height: 100vh;
+        border: 1px solid gray;
+        border-left: 0px;
+        background-color: white;
+      }
