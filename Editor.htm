@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///Users/alexiakyriakopoulou/Downloads/editor%20(3).html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Editor</title>
+    <link rel="stylesheet" href="file:///Users/alexiakyriakopoulou/Downloads/assets/css/editor.css">
+    <script src="./Editor_files/jquery.min.js"></script>
+
+
+    <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/lib/codemirror.js"></script>
+  <link rel="stylesheet" href="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/theme/eclipse.css">
+  <link rel="stylesheet" href="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/theme/solarized.css">
+    <link rel="stylesheet" href="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/theme/duotone-dark.css">
+
+
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/mode/javascript/javascript.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/mode/css/css.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/mode/markdown/markdown.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/mode/python/python.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/mode/xml/xml.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/hint/show-hint.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/hint/css-hint.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/hint/html-hint.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/fold/xml-fold.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/edit/closebrackets.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/edit/closetag.js"></script>
+  <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/hint/javascript-hint.js"></script>
+  <link rel="stylesheet" href="file:///Users/alexiakyriakopoulou/Downloads/assets/codemirror/addon/hint/show-hint.css">
+
+
+  </head>
+  <body>
+
+<textarea id="code" name="code" data-downloadable="sketch.js">function setup(){
+  createCanvas(200,200);
+}
+function draw() {
+  ellipse(40,40,20,20);
+}</textarea>
+
+<button onclick="updatePreview();">Run</button>
+
+<button data-downloadable="sketch.js">Download Code</button>
+
+
+    <iframe id="preview" src="./Editor_files/saved_resource.html"></iframe>
+
+
+
+ <script src="file:///Users/alexiakyriakopoulou/Downloads/assets/js/editor.js" charset="utf-8"></script>
+
+ <script>
+
+/*
+ * DOWNLOADABLE TEXTAREA v1.0.0
+ *
+ * by Ian Marshall (ian.js.tutor@gmail.com), 2017
+ * ======
+ * Add the "data-downloadable" attribute to the textarea
+ * you want to download as text. The value of this attribute
+ * should be the filename and extension you want to use
+ * for the downloaded text.
+ *
+ * For example:
+ * <textarea data-downloadable="text.txt"></textarea>
+ *
+ * Then create a button with the exact same data-downloadable
+ * attribute. This way, you can have multiple textareas and
+ * buttons, as long as each pair has a different filename.
+ *
+ * For example:
+ * <button data-downloadable="text.txt">download</button>
+ *
+ * NOTE: some filename extensions (.js, .py, .php, etc.)
+ * may cause browsers to issue a warning, something like
+ * "This type of file can harm your computer. Do you want
+ * to keep this file anyway?"
+ *
+ * requirements: window and document objects, nothing else
+ * ======
+ */
+
+;(function(window, document){
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    //no downloadable textareas?
+    if (!document.querySelector("[data-downloadable]")) return;
+
+//APP INIT:
+    //iterate through each downloadable textarea/button combination
+    [].forEach.call(document.querySelectorAll("button[data-downloadable]"), downloadableInit);
+
+//INIT EACH DOWNLOADABLE:
+    function downloadableInit(downloadButton){
+        //one textarea for each button, both with matching data-downloadable attributes
+        if (document.querySelectorAll("textarea[data-downloadable='" + downloadButton.getAttribute("data-downloadable") + "']").length !== 1) return;
+        //add event listener
+        downloadButton.addEventListener("click", downloadTextarea);
+    }
+
+//EVENT HANDLING:
+    function downloadTextarea(e){
+        //get file name from button
+        var fileName = e.target.getAttribute("data-downloadable"),
+        //get text from matching textarea
+            text = document.querySelector("textarea[data-downloadable='" + fileName + "']").value,
+        //create blob from text
+            textBlob = new Blob([text], {type: "text/plain"}),
+        //create link that will only temporarily be attached to document
+            tempLink = document.createElement("a");
+        //add data to temporary link
+        tempLink.download = fileName;
+        tempLink.innerHTML = "file download";
+        window.URL = window.URL || window.webkitURL;
+        tempLink.href = window.URL.createObjectURL(textBlob);
+        //temporary link deletes itself on click
+        tempLink.onclick = function(e){
+            e.target.outerHTML = "";
+        }
+        //keep temporary link from view
+        tempLink.style.display = "none";
+        //attach temporary link to DOM
+        document.body.appendChild(tempLink);
+        //trigger its click event
+        tempLink.click();
+
+    }
+
+}); //end DOMContentLoaded handler
+
+
+})(window, document);
+
+ </script>
+
+  
+
+</body></html>
