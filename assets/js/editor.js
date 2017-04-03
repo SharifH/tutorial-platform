@@ -14,7 +14,10 @@
         }
          });
       
+<<<<<<< HEAD
       var editorValue= editor.getValue();
+=======
+>>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
       // editor.on("change", function() {
       //   clearTimeout(delay);
       //   delay = setTimeout(updatePreview, 600);
@@ -28,6 +31,7 @@
         preview.open();
         preview.write(cdn+editor.getValue()+endcdn);
         preview.close();
+<<<<<<< HEAD
 
               console.log(editor.getValue());
 
@@ -57,3 +61,7 @@ experimentButton.addEventListener('click', function(e) {
 
   });
 });
+=======
+      }
+      setTimeout(updatePreview, 600);
+>>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e

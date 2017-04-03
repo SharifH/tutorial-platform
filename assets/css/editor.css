@@ -9,11 +9,11 @@ body{
         background-color: black;
 
       }
-      iframe {
-        width: 49%;
-        float: left;
-        height: 300px;
-        border: 1px solid gray;
-        border-left: 0px;
-        background-color: white;
-      }
+iframe {
+  width: 49%;
+  float: left;
+  height: 300px;
+  border: 1px solid gray;
+  border-left: 0px;
+  background-color: white;
+}
