@@ -21,9 +21,11 @@ export default StyleSheet.create({
     },
     "slideshow-container": {
         "maxWidth": 490,
+        "minHeight": 350,
         "position": "relative",
         "marginTop": 50,
-        "marginLeft": 50
+        "marginLeft": 50,
+        "color": "white"
     },
     "prev": {
         "cursor": "pointer",
