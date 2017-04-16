@@ -39,19 +39,20 @@
  <body>
   <div class="row">
     <div class="col-lg-6">
-		<textarea id=codeEx name=code>
+		<textarea data-downloadable="sketch.html" id=codeEx name=code>
 		
 		</textarea>
 
-		<button onclick="updatePreview();">Run</button>
-
 	</div>
 	<div class="col-lg-6">
+     <iframe id=previewEx></iframe>
 
-
-   			 <iframe id=previewEx></iframe>
+    <button onclick="updatePreview();">Run</button>
+    <button data-downloadable="sketch.html">Download</button>
 
 	</div>
+  <div class="row">
+ 
 </div>
   <script src="assets/js/experiment.js" charset="utf-8"></script>
 
