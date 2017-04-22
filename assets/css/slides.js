@@ -25,7 +25,7 @@ export default StyleSheet.create({
         "position": "relative",
         "marginTop": 50,
         "marginLeft": 50,
-        "color": "white"
+        "color": "black"
     },
     "prev": {
         "cursor": "pointer",
@@ -37,7 +37,7 @@ export default StyleSheet.create({
         "paddingBottom": 16,
         "paddingLeft": 16,
         "marginTop": 80,
-        "color": "white",
+        "color": "black",
         "fontWeight": "bold",
         "fontSize": 18,
         "transition": "0.6s ease",
@@ -54,7 +54,7 @@ export default StyleSheet.create({
         "paddingBottom": 16,
         "paddingLeft": 16,
         "marginTop": 80,
-        "color": "white",
+        "color": "black",
         "fontWeight": "bold",
         "fontSize": 18,
         "transition": "0.6s ease",
