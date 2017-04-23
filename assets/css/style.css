@@ -167,7 +167,7 @@ iframe#preview {
   margin-top: -3px;
 }
 
-button.editor-button {
+button.editor-button, button.editor-buttonEx {
     height: 65px;
     width: 284px;
     padding: 0;
