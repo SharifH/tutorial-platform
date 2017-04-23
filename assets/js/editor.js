@@ -1,4 +1,4 @@
- 
+
       var delay;
       // Initialize CodeMirror editor with a nice html5 canvas demo.
       var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
@@ -13,16 +13,13 @@
           "Tab": "indentMore"
         }
          });
-      
-<<<<<<< HEAD
+
       var editorValue= editor.getValue();
-=======
->>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
       // editor.on("change", function() {
       //   clearTimeout(delay);
       //   delay = setTimeout(updatePreview, 600);
       // });
-      
+
       function updatePreview() {
       var cdn = "<script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/addons/p5.dom.min.js'></script><script>"
       var endcdn="</script></body></html>"
@@ -31,8 +28,6 @@
         preview.open();
         preview.write(cdn+editor.getValue()+endcdn);
         preview.close();
-<<<<<<< HEAD
-
               console.log(editor.getValue());
 
       }
@@ -61,7 +56,4 @@ experimentButton.addEventListener('click', function(e) {
 
   });
 });
-=======
-      }
       setTimeout(updatePreview, 600);
->>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e

@@ -15,7 +15,9 @@ export default StyleSheet.create({
         "paddingRight": 0,
         "paddingBottom": 0,
         "paddingLeft": 0,
-        "width": "100%"
+        "width": "100%",
+        "backgroundColor": "#ecf0f1",
+        "height": "100%"
     },
     "header": {
         "backgroundColor": "#252121",
@@ -45,9 +47,9 @@ export default StyleSheet.create({
     "h2": {
         "textAlign": "center",
         "fontWeight": "bold",
-        "fontSize": 45,
+        "fontSize": 36,
         "color": "white",
-        "paddingTop": 102
+        "paddingTop": 53
     },
     "intro-text": {
         "display": "block",
@@ -64,8 +66,8 @@ export default StyleSheet.create({
         "paddingLeft": 75
     },
     "collection": {
-        "backgroundColor": "#322e2d",
-        "height": "100%"
+        "backgroundColor": "#ecf0f1",
+        "height": 515
     },
     "row": {
         "width": "80%",
@@ -75,19 +77,19 @@ export default StyleSheet.create({
         "marginLeft": "auto"
     },
     "inner-box": {
-        "backgroundColor": "purple",
+        "backgroundColor": "#2c3e50",
         "display": "inline-block",
-        "height": 350,
-        "width": 350,
-        "marginTop": 83,
-        "marginRight": 83,
-        "marginBottom": 83,
-        "marginLeft": 83,
-        "border": "20px solid gray"
+        "height": 200,
+        "width": 250,
+        "marginTop": 50,
+        "marginRight": 143,
+        "marginBottom": 50,
+        "marginLeft": 143,
+        "border": "10px solid gray"
     },
     "intro": {
-        "backgroundColor": "#403a3a",
-        "color": "white",
+        "backgroundColor": "#95a5a6",
+        "color": "black",
         "height": 300,
         "display": "block",
         "paddingTop": 0,
@@ -100,15 +102,26 @@ export default StyleSheet.create({
         "marginLeft": 0,
         "position": "relative"
     },
-    "buttontry-now-btn": {
-        "height": 60,
-        "width": 150,
+    "try-now-btn": {
+        "height": 65,
+        "width": 180,
         "display": "block",
         "marginTop": 0,
         "marginRight": "auto",
         "marginBottom": 0,
         "marginLeft": "auto",
-        "fontSize": 30
+        "borderRadius": 10,
+        "fontSize": 30,
+        "backgroundColor": "#3498db"
+    },
+    "try-now-btn a": {
+        "textDecoration": "none",
+        "color": "white",
+        "marginTop": "9%",
+        "marginRight": "9%",
+        "marginBottom": "9%",
+        "marginLeft": "9%",
+        "display": "inline-block"
     },
     "drop-down": {
         "display": "none"
@@ -126,7 +139,7 @@ export default StyleSheet.create({
         "marginLeft": 0,
         "float": "right"
     },
-    "ifa": {
+    "right ifa": {
         "fontSize": 35,
         "paddingTop": 30,
         "paddingRight": 30,
@@ -163,9 +176,44 @@ export default StyleSheet.create({
         "marginRight": 0,
         "marginBottom": 0,
         "marginLeft": 0,
-        "float": "right",
+        "float": "left",
         "clear": "left",
         "width": "50%"
     },
-    "slideshow": {}
+    "slideshow": {
+        "height": 474,
+        "marginTop": -48
+    },
+    "iframepreview": {
+        "width": "50%",
+        "height": 710,
+        "backgroundColor": "white",
+        "border": 0,
+        "marginTop": -476
+    },
+    "button-holder": {
+        "display": "inline-block",
+        "width": "50%",
+        "float": "right",
+        "height": 66,
+        "backgroundColor": "#ecf0f1",
+        "marginTop": -3
+    },
+    "buttoneditor-button": {
+        "height": 65,
+        "width": 284,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "borderStyle": "solid",
+        "border": 0,
+        "backgroundColor": "#2c3e50",
+        "color": "white",
+        "fontSize": 30,
+        "marginTop": 0,
+        "marginRight": "7%",
+        "marginBottom": 0,
+        "marginLeft": "7%"
+    }
 });

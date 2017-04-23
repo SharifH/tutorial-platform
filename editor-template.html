@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Editor</title>
+    <link rel="stylesheet" href="assets/css/editor.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+    <script src="assets/codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="assets/codemirror/theme/eclipse.css">
+    <link rel="stylesheet" href="assets/codemirror/theme/solarized.css">
+    <link rel="stylesheet" href="assets/codemirror/theme/duotone-dark.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slides.css">
+    <link rel="stylesheet" href="assets/css/bubble.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+    <script src="assets/js/snap.svg-min.js"></script>
+
+
+    <script src="assets/codemirror/mode/javascript/javascript.js"></script>
+    <script src="assets/codemirror/mode/css/css.js"></script>
+    <script src="assets/codemirror/mode/markdown/markdown.js"></script>
+    <script src="assets/codemirror/mode/python/python.js"></script>
+    <script src="assets/codemirror/mode/xml/xml.js"></script>
+    <script src="assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="assets/codemirror/addon/hint/show-hint.js"></script>
+    <script src="assets/codemirror/addon/hint/css-hint.js"></script>
+    <script src="assets/codemirror/addon/hint/html-hint.js"></script>
+    <script src="assets/codemirror/addon/fold/xml-fold.js"></script>
+    <script src="assets/codemirror/addon/edit/closebrackets.js"></script>
+    <script src="assets/codemirror/addon/edit/closetag.js"></script>
+    <script src="assets/codemirror/addon/hint/javascript-hint.js"></script>
+    <link rel="stylesheet" href="assets/codemirror/addon/hint/show-hint.css">
+    <script src="assets/js/experiment.js" charset="utf-8"></script>
+
+
+</head>
+
+<body>
+    <div class="menu-wrap">
+        <nav class="menu">
+            <div class="icon-list">
+                <a href="index.html"><i class="fa fa-fw fa-star-o"></i><span>Home</span></a>
+                <a href="collection.html"><i class="fa fa-fw fa-pied-piper"></i><span>Collection</span></a>
+                <a href="editor.html"><i class="fa fa-fw fa-pencil"></i><span>Editor</span></a>
+                <a href="experiment.html"><i class="fa fa-fw fa-flask"></i><span>Experiments</span></a>
+            </div>
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+          <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+      </svg>
+        </div>
+    </div>
+    <header>
+        <button class="left menu-button" id="open-button"></button>
+        <div id="morphsearch" class="morphsearch">
+            <form class="morphsearch-form">
+                <input class="morphsearch-input" type="search" placeholder="Search..." />
+                <button class="morphsearch-submit" type="submit">Search</button>
+            </form>
+            <div class="morphsearch-content">
+                <div class="dummy-column">
+                    <h2>Topics</h2>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://appendto.com/wp-content/uploads/2016/05/javascript-420x168.png" alt="js" />
+                        <h3>JavaScript</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://processing.org/img/processing3-logo.png" alt="Processing" />
+                        <h3>Processing</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="http://hello.p5js.org/assets/p5-sq-reverse.svg" alt="p5" />
+                        <h3>P5</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://avatars1.githubusercontent.com/u/1562726?v=3&s=400" alt="d3" />
+                        <h3>D3</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://www.digitaltactics.co.uk/wp-content/uploads/sites/2/2015/11/three-js-logo-480x368.png" alt="3js" />
+                        <h3>Three.js</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" alt="html" />
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                <div class="dummy-column">
+                    <h2>Popular</h2>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://appendto.com/wp-content/uploads/2016/05/javascript-420x168.png" alt="js" />
+                        <h3>JavaScript</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" alt="html" />
+                        <h3>HTML</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="http://creative-punch.net/wp-content/uploads/2014/01/Logo-CSS3.jpg" alt="HoverEffectsIdeasNew" />
+                        <h3>CSS3</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="http://getbootstrap.com/apple-touch-icon.png" alt="FreebieHalcyonDays" />
+                        <h3>Bootstrap</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://processing.org/img/processing3-logo.png" alt="ArticleIntroEffects" />
+                        <h3>Processing</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://avatars1.githubusercontent.com/u/1562726?v=3&s=400" alt="DraggableDualViewSlideshow" />
+                        <h3>D3.js</h3>
+                    </a>
+                </div>
+            </div>
+            <!-- /morphsearch-content -->
+            <span class="morphsearch-close"></span>
+        </div>
+        <!-- /morphsearch -->
+    </header>
+    <section id="instructions">
+        <div class="slideshow">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">Slide Numbers eg(1 / 28)</div>
+                    <h1>Description &amp; Number eg  (Setup() and Draw() (1/2)) </h1>
+                    <p>Instructions (The template code contains two blocks, or functions: setup() and draw(). You can put your code in either place and there is a specific purpose for each. The code in setup() is only run once. The code inside the draw()function runs
+                        continuously from top to bottom until the program is stopped.)</p>
+                </div>
+                <div class="mySlides fade">
+                    <div class="numbertext"></div>
+                    <h1></h1>
+                    <p></p>
+                </div>
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="code">
+
+        </div>
+    </section>
+    <section id="livecode">
+      <textarea id=code name=code>
+      function setup(){
+      createCanvas(200,200);
+      }
+      function draw() {
+      ellipse(40,40,20,20);
+      }</textarea>
+
+
+    </section>
+
+
+
+
+    <iframe id=preview></iframe>
+    <div class="button-holder">
+      <button class="editor-button" onclick="updatePreview();">Run</button>
+      <button class="editor-button"  id=experimentButton><a href= experiment.html style="text-decoration: none; color:white;">Experiment</a></button>
+    </div>
+
+
+
+    <script src="assets/js/editor.js" charset="utf-8"></script>
+    <script src="assets/js/slides.js"></script>
+    <script src="assets/js/script.js" charset="utf-8"></script>
+    <script src="assets/js/menu.js" charset="utf-8"></script>
+
+</body>
+
+</html>

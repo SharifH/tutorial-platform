@@ -4,88 +4,20 @@
 <head>
     <meta charset="utf-8">
     <title>Editor</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/editor.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<<<<<<< HEAD
 
 
-    <script src="assets/codemirror/lib/codemirror.js"></script>
-  <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css">
-  <link rel="stylesheet" href="assets/codemirror/theme/eclipse.css">
-  <link rel="stylesheet" href="assets/codemirror/theme/solarized.css">
-    <link rel="stylesheet" href="assets/codemirror/theme/duotone-dark.css">
-
-
-  <script src="assets/codemirror/mode/javascript/javascript.js"></script>
-  <script src="assets/codemirror/mode/css/css.js"></script>
-  <script src="assets/codemirror/mode/markdown/markdown.js"></script>
-  <script src="assets/codemirror/mode/python/python.js"></script>
-  <script src="assets/codemirror/mode/xml/xml.js"></script>
-  <script src="assets/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-  <script src="assets/codemirror/addon/hint/show-hint.js"></script>
-  <script src="assets/codemirror/addon/hint/css-hint.js"></script>
-  <script src="assets/codemirror/addon/hint/html-hint.js"></script>
-  <script src="assets/codemirror/addon/fold/xml-fold.js"></script>
-  <script src="assets/codemirror/addon/edit/closebrackets.js"></script>
-  <script src="assets/codemirror/addon/edit/closetag.js"></script>
-  <script src="assets/codemirror/addon/hint/javascript-hint.js"></script>
-  <link rel="stylesheet" href="assets/codemirror/addon/hint/show-hint.css">
-<!--   <script src="assets/js/experiment.js" charset="utf-8"></script>
- -->
-
-
-  </head>
-  <body>
-    <header>
-      <span></span>
-      <ul>
-        <span></span>
-        <ul>
-          <li><a href="creator.html">Contribute</a></li>
-          <li><a href="#">saved</a></li>
-          <li><a href="#">Log Out</a></li>
-        </ul>
-      </ul>
-    </header>
-    <section id="instructions">
-      <div class="slideshow">
-
-      </div>
-      <div class="code">
-
-      </div>
-    </section>
-    <section id="livecode">
-
-    </section>
-
-<<<<<<< HEAD
-<textarea id=code name=code>
-function setup(){
-  createCanvas(200,200);
-}
-function draw() {
-  ellipse(40,40,20,20);
-}</textarea>
-
-<button onclick="updatePreview();">Run</button>
-
-
-    <iframe id=preview></iframe>
-
-<button id=experimentButton><a href= experiment.html>Experiment</a></button>
-
-
- <script src="assets/js/editor.js" charset="utf-8"></script>
-
-=======
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="assets/codemirror/lib/codemirror.js"></script>
     <link rel="stylesheet" href="assets/codemirror/lib/codemirror.css">
     <link rel="stylesheet" href="assets/codemirror/theme/eclipse.css">
     <link rel="stylesheet" href="assets/codemirror/theme/solarized.css">
     <link rel="stylesheet" href="assets/codemirror/theme/duotone-dark.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/slides.css">
+    <link rel="stylesheet" href="assets/css/bubble.css">
+    <link rel="stylesheet" href="assets/css/search.css">
+    <script src="assets/js/snap.svg-min.js"></script>
 
 
     <script src="assets/codemirror/mode/javascript/javascript.js"></script>
@@ -102,21 +34,95 @@ function draw() {
     <script src="assets/codemirror/addon/edit/closetag.js"></script>
     <script src="assets/codemirror/addon/hint/javascript-hint.js"></script>
     <link rel="stylesheet" href="assets/codemirror/addon/hint/show-hint.css">
-    <script src="assets/js/slides.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="assets/css/slides.css">
+    <script src="assets/js/experiment.js" charset="utf-8"></script>
+
+
 </head>
 
 <body>
+    <div class="menu-wrap">
+        <nav class="menu">
+            <div class="icon-list">
+                <a href="index.html"><i class="fa fa-fw fa-star-o"></i><span>Home</span></a>
+                <a href="collection.html"><i class="fa fa-fw fa-pied-piper"></i><span>Collection</span></a>
+                <a href="editor.html"><i class="fa fa-fw fa-pencil"></i><span>Editor</span></a>
+                <a href="experiment.html"><i class="fa fa-fw fa-flask"></i><span>Experiments</span></a>
+            </div>
+        </nav>
+        <button class="close-button" id="close-button">Close Menu</button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+          <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+      </svg>
+        </div>
+    </div>
     <header>
-        <span class="left"><i class="fa fa-search" aria-hidden="true"></i></span>
-        <ul class="right">
-            <span><i class="fa fa-user-circle-o" aria-hidden="true"></i></span>
-            <ul id="drop-down">
-                <li><a href="creator.html">Contribute</a></li>
-                <li><a href="#">saved</a></li>
-                <li><a href="#">Log Out</a></li>
-            </ul>
-        </ul>
+        <button class="left menu-button" id="open-button"></button>
+        <div id="morphsearch" class="morphsearch">
+            <form class="morphsearch-form">
+                <input class="morphsearch-input" type="search" placeholder="Search..." />
+                <button class="morphsearch-submit" type="submit">Search</button>
+            </form>
+            <div class="morphsearch-content">
+                <div class="dummy-column">
+                    <h2>Topics</h2>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://appendto.com/wp-content/uploads/2016/05/javascript-420x168.png" alt="js" />
+                        <h3>JavaScript</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://processing.org/img/processing3-logo.png" alt="Processing" />
+                        <h3>Processing</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="http://hello.p5js.org/assets/p5-sq-reverse.svg" alt="p5" />
+                        <h3>P5</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://avatars1.githubusercontent.com/u/1562726?v=3&s=400" alt="d3" />
+                        <h3>D3</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://www.digitaltactics.co.uk/wp-content/uploads/sites/2/2015/11/three-js-logo-480x368.png" alt="3js" />
+                        <h3>Three.js</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img class="round" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" alt="html" />
+                        <h3>HTML</h3>
+                    </a>
+                </div>
+                <div class="dummy-column">
+                    <h2>Popular</h2>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://appendto.com/wp-content/uploads/2016/05/javascript-420x168.png" alt="js" />
+                        <h3>JavaScript</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/200px-HTML5_logo_and_wordmark.svg.png" alt="html" />
+                        <h3>HTML</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="http://creative-punch.net/wp-content/uploads/2014/01/Logo-CSS3.jpg" alt="HoverEffectsIdeasNew" />
+                        <h3>CSS3</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="http://getbootstrap.com/apple-touch-icon.png" alt="FreebieHalcyonDays" />
+                        <h3>Bootstrap</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://processing.org/img/processing3-logo.png" alt="ArticleIntroEffects" />
+                        <h3>Processing</h3>
+                    </a>
+                    <a class="dummy-media-object" href="collection.html">
+                        <img src="https://avatars1.githubusercontent.com/u/1562726?v=3&s=400" alt="DraggableDualViewSlideshow" />
+                        <h3>D3.js</h3>
+                    </a>
+                </div>
+            </div>
+            <!-- /morphsearch-content -->
+            <span class="morphsearch-close"></span>
+        </div>
+        <!-- /morphsearch -->
     </header>
     <section id="instructions">
         <div class="slideshow">
@@ -133,14 +139,14 @@ function draw() {
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 28</div>
                     <h1> Setup() and Draw() (2/2) </h2>
-             <p>Any code involved in setting up the initial state of your program goes in the setup() function.  Any code involved in actually drawing to the screen (setting the background color, or drawing shapes, text, or images) will be placed in the draw() function.</p>
+           <p>Any code involved in setting up the initial state of your program goes in the setup() function.  Any code involved in actually drawing to the screen (setting the background color, or drawing shapes, text, or images) will be placed in the draw() function.</p>
 
-          </div>
+        </div>
 
 
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 28</div>
-            <h1> createCanvas() </h1>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 28</div>
+          <h1> createCanvas() </h1>
                     <p>There’s one special function that you can put inside the setup function called createCanvas(). his function sets the size (in pixels) of your sketch. The first parameter specifies the width of the sketch, and the second specifies its
                         height. Task: Create a createCanvas() function.</p>
 
@@ -349,51 +355,51 @@ function draw() {
                 <div class="mySlides fade">
                     <div class="numbertext">22/ 28</div>
                     <h1>xspeed and yspeed</h2>
-          <p>
-          Task: Replace your previous code with the xspeed instead of speed and create a new variable for y and name it yspeed. You should also create an if statement for the y which corresponds to the height of the canvas just like you did with x and width in the previous task.
+        <p>
+        Task: Replace your previous code with the xspeed instead of speed and create a new variable for y and name it yspeed. You should also create an if statement for the y which corresponds to the height of the canvas just like you did with x and width in the previous task.
 
-          </P>
-          </div>
-
-
-          <div class="mySlides fade">
-          <div class="numbertext">23/ 28</div>
-          <p>
-          If you run your code you will notice that the right semicircle goes off the canvas in our code because we created an if statements that says that whenever our x is bigger than the width of the canvas and our y is bigger than the height of the canvas the ball comes back.
-          <br>
-          <img class="img3" src="assets/image/image.3.png">
-
-          </P>
-          </div>
-
-          <div class="mySlides fade">
-          <div class="numbertext">24/ 28</div>
-          <p>
-          In order for the ball to be right at the edge when it goes back, we should create a function that says whenever our x is bigger than the width of the canvas and our y is bigger than the height of the canvas minus the radius of the ellipse the ball comes back.
-          <br>
-          <br>
-
-          Task: Create a variable called radius, replace it in the ellipse parameter and create the conditional statement above. Remember that the width and the height of a perfect ellipse is equal to r×2.
+        </P>
+        </div>
 
 
+        <div class="mySlides fade">
+        <div class="numbertext">23/ 28</div>
+        <p>
+        If you run your code you will notice that the right semicircle goes off the canvas in our code because we created an if statements that says that whenever our x is bigger than the width of the canvas and our y is bigger than the height of the canvas the ball comes back.
+        <br>
+        <img class="img3" src="assets/image/image.3.png">
 
-          </P>
-          </div>
-          <div class="mySlides fade">
-          <div class="numbertext">25/ 28</div>
-          <h1>Comparison Operators<h2>
-          <br>
-          <img class="img4" src="assets/image/image.4.png">
+        </P>
+        </div>
 
+        <div class="mySlides fade">
+        <div class="numbertext">24/ 28</div>
+        <p>
+        In order for the ball to be right at the edge when it goes back, we should create a function that says whenever our x is bigger than the width of the canvas and our y is bigger than the height of the canvas minus the radius of the ellipse the ball comes back.
+        <br>
+        <br>
 
-          </div>
+        Task: Create a variable called radius, replace it in the ellipse parameter and create the conditional statement above. Remember that the width and the height of a perfect ellipse is equal to r×2.
 
 
 
+        </P>
+        </div>
+        <div class="mySlides fade">
+        <div class="numbertext">25/ 28</div>
+        <h1>Comparison Operators<h2>
+        <br>
+        <img class="img4" src="assets/image/image.4.png">
 
-          <div class="mySlides fade">
-          <div class="numbertext">26/ 28</div>
-          <h1>Adding to our if statements</h1>
+
+        </div>
+
+
+
+
+        <div class="mySlides fade">
+        <div class="numbertext">26/ 28</div>
+        <h1>Adding to our if statements</h1>
                     <p> Right now our ball doesn't go off the right side of the canvas but what about the left side? In order to create another conditional for the ball to go back every time it hits the left side you should use the or || operator.
                         <br>
                         <br> Example: <br> if (hour
@@ -439,35 +445,38 @@ function draw() {
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
-      </section>
-      <section id='code'>
         <div class="code">
-            <button onclick="updatePreview();">Run</button>
-            <textarea id=code name=code>
-              function setup(){
-                createCanvas(200,200);
-              }
-              function draw() {
-                ellipse(40,40,20,20);
-              }
-            </textarea>
 
         </div>
-      </section>
     </section>
     <section id="livecode">
-        <iframe id=preview></iframe>
-    </section>
->>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
+        <textarea id=code name=code>
+      function setup(){
+      createCanvas(200,200);
+      }
+      function draw() {
+      ellipse(40,40,20,20);
+      }</textarea>
 
-=======
+
+    </section>
+
+
+
+
+    <iframe id=preview></iframe>
+    <div class="button-holder">
+        <button class="editor-button" onclick="updatePreview();">Run</button>
+        <button class="editor-button" id=experimentButton><a href= experiment.html style="text-decoration: none; color:white;">Experiment</a></button>
+    </div>
+
+
+
     <script src="assets/js/editor.js" charset="utf-8"></script>
+    <script src="assets/js/slides.js"></script>
     <script src="assets/js/script.js" charset="utf-8"></script>
-<<<<<<< HEAD
->>>>>>> master
-  </body>
-=======
+    <script src="assets/js/menu.js" charset="utf-8"></script>
+
 </body>
 
->>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
 </html>
