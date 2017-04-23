@@ -1,7 +1,8 @@
  
       var delay;
       // Initialize CodeMirror editor with a nice html5 canvas demo.
-      var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+      var textarea = document.getElementById("code")
+      var editor = CodeMirror.fromTextArea(textarea, {
         mode: 'javascript',
         styleActiveLine: true,
         lineNumbers: true,
@@ -14,10 +15,10 @@
         }
          });
       
-<<<<<<< HEAD
+// <<<<<<< HEAD
       var editorValue= editor.getValue();
-=======
->>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
+// =======
+// >>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
       // editor.on("change", function() {
       //   clearTimeout(delay);
       //   delay = setTimeout(updatePreview, 600);
@@ -31,7 +32,7 @@
         preview.open();
         preview.write(cdn+editor.getValue()+endcdn);
         preview.close();
-<<<<<<< HEAD
+// <<<<<<< HEAD
 
               console.log(editor.getValue());
 
@@ -61,7 +62,7 @@ experimentButton.addEventListener('click', function(e) {
 
   });
 });
-=======
-      }
-      setTimeout(updatePreview, 600);
->>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
+// =======
+      
+//       setTimeout(updatePreview, 600);
+// >>>>>>> fec2cae81063d4a1bec29a0e8f966af60a1d4d4e
