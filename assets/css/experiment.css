@@ -1,22 +1,16 @@
-body{
-  background-color: black;
-}
-
-      editor {
+      #codeEx {
         float: left;
-        width: 100%;
-        height: 100vh;
-
+        width: 50%;
+        height: 90%;
         border: 1px solid black;
         background-color: black;
-
-
+        padding:0px;
       }
       #previewEx {
-        width: 100%;
+        width: 50%;
         float: left;
-        height: 100vh;
+        height: 80vh;
         border: 1px solid gray;
-        border-left: 0px;
+        margin-left: 0px;
         background-color: white;
       }
