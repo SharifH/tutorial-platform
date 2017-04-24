@@ -17,7 +17,8 @@ export default StyleSheet.create({
         "paddingLeft": 0,
         "width": "100%",
         "backgroundColor": "#ecf0f1",
-        "height": "100%"
+        "height": "100%",
+        "fontFamily": "Verdana,sans-serif"
     },
     "header": {
         "backgroundColor": "#252121",
@@ -200,6 +201,23 @@ export default StyleSheet.create({
         "marginTop": -3
     },
     "buttoneditor-button": {
+        "height": 65,
+        "width": 284,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "borderStyle": "solid",
+        "border": 0,
+        "backgroundColor": "#2c3e50",
+        "color": "white",
+        "fontSize": 30,
+        "marginTop": 0,
+        "marginRight": "7%",
+        "marginBottom": 0,
+        "marginLeft": "7%"
+    },
+    "buttoneditor-buttonEx": {
         "height": 65,
         "width": 284,
         "paddingTop": 0,
