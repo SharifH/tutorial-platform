@@ -18,7 +18,7 @@ export default StyleSheet.create({
         "width": "100%",
         "backgroundColor": "#ecf0f1",
         "height": "100%",
-        "fontFamily": "Verdana,sans-serif"
+        "fontFamily": "Verdana, sans-serif"
     },
     "header": {
         "backgroundColor": "#252121",
@@ -82,10 +82,10 @@ export default StyleSheet.create({
         "display": "inline-block",
         "height": 200,
         "width": 250,
-        "marginTop": 50,
-        "marginRight": 143,
-        "marginBottom": 50,
-        "marginLeft": 143,
+        "marginTop": "2%",
+        "marginRight": "8%",
+        "marginBottom": "2%",
+        "marginLeft": "8%",
         "border": "10px solid gray"
     },
     "intro": {
@@ -190,7 +190,7 @@ export default StyleSheet.create({
         "height": 710,
         "backgroundColor": "white",
         "border": 0,
-        "marginTop": -476
+        "marginTop": "-19.4%"
     },
     "button-holder": {
         "display": "inline-block",
