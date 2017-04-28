@@ -51,13 +51,13 @@ export default StyleSheet.create({
         "zIndex": 10,
         "width": "100%",
         "height": "100%",
-        "background": "rgba(0,0,0,0.3)",
+        "background": "rgba(0, 0, 0, 0.3)",
         "content": "''",
         "opacity": 0,
         "WebkitTransition": "opacity 0.4s, -webkit-transform 0s 0.4s",
         "transition": "opacity 0.4s, transform 0s 0.4s",
-        "WebkitTransform": "translate3d(100%,0,0)",
-        "transform": "translate3d(100%,0,0)"
+        "WebkitTransform": "translate3d(100%, 0, 0)",
+        "transform": "translate3d(100%, 0, 0)"
     },
     "menu-button": {
         "position": "fixed",
@@ -103,12 +103,12 @@ export default StyleSheet.create({
         "background": "transparent",
         "color": "transparent",
         "opacity": 0,
-        "WebkitTransform": "translate3d(-160px,0,0)",
-        "transform": "translate3d(-160px,0,0)",
+        "WebkitTransform": "translate3d(-160px, 0, 0)",
+        "transform": "translate3d(-160px, 0, 0)",
         "WebkitTransition": "opacity 0s 0.3s, -webkit-transform 0s 0.3s",
         "transition": "opacity 0s 0.3s, transform 0s 0.3s",
-        "WebkitTransitionTimingFunction": "cubic-bezier(.17,.67,.1,1.27)",
-        "transitionTimingFunction": "cubic-bezier(.17,.67,.1,1.27)"
+        "WebkitTransitionTimingFunction": "cubic-bezier(.17, .67, .1, 1.27)",
+        "transitionTimingFunction": "cubic-bezier(.17, .67, .1, 1.27)"
     },
     "close-button::before": {
         "content": "''",
@@ -138,8 +138,8 @@ export default StyleSheet.create({
         "width": 200,
         "height": "100%",
         "fontSize": 1.15,
-        "WebkitTransform": "translate3d(-280px,0,0)",
-        "transform": "translate3d(-280px,0,0)",
+        "WebkitTransform": "translate3d(-280px, 0, 0)",
+        "transform": "translate3d(-280px, 0, 0)",
         "WebkitTransition": "-webkit-transform 0.4s",
         "transition": "transform 0.4s"
     },
@@ -151,12 +151,12 @@ export default StyleSheet.create({
         "paddingBottom": 0,
         "paddingLeft": 0,
         "opacity": 0,
-        "WebkitTransform": "translate3d(-160px,0,0)",
-        "transform": "translate3d(-160px,0,0)",
+        "WebkitTransform": "translate3d(-160px, 0, 0)",
+        "transform": "translate3d(-160px, 0, 0)",
         "WebkitTransition": "opacity 0s 0.3s, -webkit-transform 0s 0.3s",
         "transition": "opacity 0s 0.3s, transform 0s 0.3s",
-        "WebkitTransitionTimingFunction": "cubic-bezier(.17,.67,.1,1.27)",
-        "transitionTimingFunction": "cubic-bezier(.17,.67,.1,1.27)"
+        "WebkitTransitionTimingFunction": "cubic-bezier(.17, .67, .1, 1.27)",
+        "transitionTimingFunction": "cubic-bezier(.17, .67, .1, 1.27)"
     },
     "icon-list a": {
         "display": "block",
@@ -187,21 +187,21 @@ export default StyleSheet.create({
     "show-menu menu-wrap": {
         "WebkitTransitionDelay": "0s",
         "transitionDelay": "0s",
-        "WebkitTransform": "translate3d(0,0,0)",
-        "transform": "translate3d(0,0,0)"
+        "WebkitTransform": "translate3d(0, 0, 0)",
+        "transform": "translate3d(0, 0, 0)"
     },
     "show-menu content::before": {
         "WebkitTransitionDelay": "0s",
         "transitionDelay": "0s",
-        "WebkitTransform": "translate3d(0,0,0)",
-        "transform": "translate3d(0,0,0)",
+        "WebkitTransform": "translate3d(0, 0, 0)",
+        "transform": "translate3d(0, 0, 0)",
         "opacity": 1,
         "WebkitTransition": "opacity 0.4s",
         "transition": "opacity 0.4s"
     },
     "show-menu menu": {
-        "WebkitTransform": "translate3d(0,0,0)",
-        "transform": "translate3d(0,0,0)",
+        "WebkitTransform": "translate3d(0, 0, 0)",
+        "transform": "translate3d(0, 0, 0)",
         "opacity": 1,
         "WebkitTransition": "opacity 0.3s, -webkit-transform 0.3s",
         "transition": "opacity 0.3s, transform 0.3s",
@@ -209,8 +209,8 @@ export default StyleSheet.create({
         "transitionDelay": "0.4s"
     },
     "show-menu close-button": {
-        "WebkitTransform": "translate3d(0,0,0)",
-        "transform": "translate3d(0,0,0)",
+        "WebkitTransform": "translate3d(0, 0, 0)",
+        "transform": "translate3d(0, 0, 0)",
         "opacity": 1,
         "WebkitTransition": "opacity 0.3s, -webkit-transform 0.3s",
         "transition": "opacity 0.3s, transform 0.3s",
@@ -218,7 +218,7 @@ export default StyleSheet.create({
         "transitionDelay": "0.4s"
     },
     "show-menu morph-shape": {
-        "WebkitTransform": "translate3d(0,0,0)",
-        "transform": "translate3d(0,0,0)"
+        "WebkitTransform": "translate3d(0, 0, 0)",
+        "transform": "translate3d(0, 0, 0)"
     }
 });
