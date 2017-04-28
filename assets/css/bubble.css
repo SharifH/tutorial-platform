@@ -129,7 +129,7 @@ body,
 .menu {
 	position: relative;
 	z-index: 1000;
-	padding: 3em 1em 0;
+	padding: 3em 0em 0;
 }
 
 .menu,
