@@ -32,11 +32,24 @@ The div that contains the class "numbertext" is where you would declare how many
 
 The h1 tag contains the description of the slide and what you would be doing in the tutorial.
 
-The paragraph would have the instructions on how to complete the following step in the tutorial.
             
 ### CodeMirror
+Tutorials in HTML, Javascript, p5.js and CSS can reference the corresponding editor.js and experiment.js files in the assets folder. To add a tutorial in a different language, copt the editor.js and experiment.js files, rename them with the tutorial language, and change the Codemirror mode as indicated below. 
+
 	//CodeMirror code block stuff
-	
+    var editor = CodeMirror.fromTextArea(document.getElementById('code'), {
+    //change the mode for tutorials in other languages
+    mode: 'javascript',
+    styleActiveLine: true,
+    lineNumbers: true,
+    lineWrapping: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+    theme : 'solarized',
+    extraKeys: {
+    "Tab": "indentMore"
+    }
+    });
 
 ## What has been completed
 In this version we have found a way to create a tutorial site that has fully functioning tutorials, slides, editor, and a editor viewer. Using these tools we were able to populate the project with three tutorials that we plan on expanding upon in the near future. We have also provided a template in order to add more tutorials to the platform by editing the template provided.
