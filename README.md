@@ -35,8 +35,21 @@ The h1 tag contains the description of the slide and what you would be doing in 
 The paragraph would have the instructions on how to complete the following step in the tutorial.
             
 ### CodeMirror
-	//CodeMirror code block stuff
-	
+Tutorials in Javascript, p5.js, or HTML can link from the tutorial's html file to the corresponding editor.js and experiment.js files in the assets folder. To create a tutorial in another language, new files would need to be created in the appropriate mode. The only code that needs to be changed in those files is the codemirror mode which should be changed from javascript to the language required for the tutorial. 
+
+    //CodeMirror code block stuff
+    var codeeditor = CodeMirror.fromTextArea(textarea, {
+    mode:  "javascript",
+    styleActiveLine: true,
+    lineNumbers: true,
+    lineWrapping: true,
+    autoCloseTags: true,
+    autoCloseBrackets: true,
+    theme : 'solarized',
+    extraKeys: {
+    "Tab": "indentMore"
+    }
+
 
 ## What has been completed
 In this version we have found a way to create a tutorial site that has fully functioning tutorials, slides, editor, and a editor viewer. Using these tools we were able to populate the project with three tutorials that we plan on expanding upon in the near future. We have also provided a template in order to add more tutorials to the platform by editing the template provided.
