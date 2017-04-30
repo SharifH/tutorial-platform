@@ -36,7 +36,7 @@ var delay;
 
       $.ajax({
             type: "GET",
-            url: '/api/experiment/',
+            url: 'http://localhost:3000/api/experiment/',
             success: function(data) {
               // console.log(data.editorValue)
 

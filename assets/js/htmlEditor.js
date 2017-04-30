@@ -41,7 +41,7 @@ experimentButton.addEventListener('click', function(e) {
 // save a version
   $.ajax({
     type: "POST",
-    url: '/api/experiment',
+    url: 'http://localhost:3000/api/experiment',
     data: {
       editorValue: editor.getValue(),
 

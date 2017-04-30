@@ -235,27 +235,41 @@ height:150px;
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 18</div>
-  <h1>  HTML Introduction </h1>
-<p> HTML stands for Hyper Text Markup Language
-HTML describes the structure of Web pages using markup
-HTML elements are the building blocks of HTML pages
-HTML elements are represented by tags. HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
-Browsers do not display the HTML tags, but use them to render the content of the page </p> 
+  <h1>  CSS Introduction </h1>
+<p> Cascading Style Sheets, fondly referred to as CSS, is a simple design language intendedto simplify the process of making web pages presentable. CSS handles the look and feel part of a web page. Using CSS, you can control the color of the text, the style of fonts, the spacing between paragraphs, how columns are sized and laid out, what background images or colors are used, as well as a variety of other effects.
+</p> 
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 18</div>
-  <h1> Simple HTML Document Structure </h2>
-    <img class="screen4" src="screen.4.png">
- </div>
+  <h1> CSS Syntax </h2>
+    <p>A CSS comprises of style rules that are interpreted by the browser and then applied to the corresponding elements in your document. A style rule is made of three parts. </p>
+  </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 18</div>
-  <h1> Opening and closing tags </h1>
+  <h1> CSS Syntax </h2>
 <p>
-  <img src="screen.2.png">
+<ul>
+<li>Selector: A selector is an HTML tag at which a style will be applied. This could be any tag like &lt;h1> or &lt;table> etc.
+<li>Property: A property is a type of attribute of HTML tag. Put simply, all the HTML attributes are converted into CSS properties. They could be color, border, etc.
+<li>Value: Values are assigned to properties. For example, color property can have the value either red or #F1F1F1 etc.
+</ul>
+</p>
+ </div>
 
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 18</div>
+  <h1> CSS Syntax </h1>
+<p>
+You can put CSS Style Rule Syntax as follows:
+selector { property: value }
+<br>
+<br>
+Example: You can define a table border as follows:
+table{ border :1px solid #C00; }
 </p>
 
 
@@ -263,133 +277,94 @@ Browsers do not display the HTML tags, but use them to render the content of the
 
 <div class="mySlides fade">
   <div class="numbertext">4 / 18</div>
-  <h1>Task 1 </h1>
-   <img src="screen.3.png">
+  <h1>The Type Selectors </h1>
+  
 
-<p>. </p>
+<p> This is the same selector we have seen above. Again, one more example to give a color
+to all level 1 headings: <br>
+<br>
+h1 {<br>
+ color: #36CFFF;
+}
+</p>
  
 </div>
 
+
+
 <div class="mySlides fade">
 <div class="numbertext"> 5 / 18</div>
-<h1>Paragraph</h1>
- <img class="screen5" src="screen.5.png">
+<h1> The Universal Selectors </h1>
+<p> Rather than selecting elements of a specific type, the universal selector quite simply
+matches the name of any element type:
+<br>
+<br>
+* {<br>
+ color: #000000;<br>
+}<br>
+<br>
+This rule renders the content of every element in our document in black.
+</p>
 
 
 </div>
+
 
 <div class="mySlides fade">
 <div class="numbertext"> 6 / 18</div>
-<h1> Task 2</h1>
-<p> Write between an opening and closing paragraph tag: "Hi I'm Anna an NYC based marketer. Say Hello!" </p>
-
+<h1> Class Selectors</h1>
+<p> The class selector selects elements with a specific class attribute. 
+    To select elements with a specific class, write a period (.) character, 
+    followed by the name of the class. In the example below, all HTML elements 
+    with class="center" will be red and center-aligned:
+<br>
+<br>
+  .center { <br>
+    text-align: center;
+    color: red; <br>
+}
+</p>
 
 </div>
+
 
 <div class="mySlides fade">
 <div class="numbertext"> 7 / 18</div>
-<h1>Email Form</h1>
-<p> No matter what type of information you need from you users, to get it from them you need to use the &lt;input&gt; tag. There are many different types of inputs but for now all we will cover is "email" and "submit".</p>
+<h1> Class Selectors</h1>
+<p> HTML elements can also refer to more than one class. In the example below, the &lt;p> element will be styled according to class="center" and to class="large": 
+<br>
+<br>
+ &lt;p class="center large">This paragraph refers to two classes.&lt;/p>
+}
 
+<br>
+<br>
+  .center { <br>
+    text-align: center;
+    color: red; <br>
+}
+</p>
 
 </div>
-<div class="mySlides fade">
+
+
+<p> <div class="mySlides fade">
 <div class="numbertext"> 8 / 18</div>
-<h1> Task 3</h1>
-<p> At the bottom, write &lt;input type="email"&gt; </p>
-
-</div>
-
-<div class="mySlides fade">
-<div class="numbertext"> 9 / 18</div>
-<h1> Attribute </h1>
-<img class="screen6" src="screen6.png">
-
-
-
-</div>
-<div class="mySlides fade">
-<div class="numbertext"> 10 / 18</div>
-<h1> Attribute </h1>
-<p>If there were an HTML tag for pizza,here's some of its attributes might look like:
+<h1> Id Selector</h1>
+<p> The id selector uses the id attribute of an HTML element to select a specific element. The id of an element should be unique within a page, so the id selector is used to select one unique element!
+To select an element with a specific id, write a hash (#) character, followed by the id of the element. The style rule below will be applied to the HTML element with id="para1":
 <br>
 <br>
-&lt;pizza size="large" crust="thin" type="pepperoni"  &gt;   
-<br>
-<br>
-You can think of attributes as options for each tag.
- </p>
+ 
+ #para1 {<br>
+    text-align: center;
+    color: red;<br>
+}
+</p>
 
 </div>
 
 
-<div class="mySlides fade">
-<div class="numbertext"> 11 / 18</div>
-<h1>Submit button </h1>
-<p>The "email" input won't do much without a "submit" button! </p>
-
-</div>
-
-
-<div class="mySlides fade">
-<div class="numbertext"> 12 / 18</div>
-<h1>Task 4</h1>
-<p>Make another input with type="submit"</p>
-
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">13 / 18</div>
-  <h1> Placeholder</h1>
-<p> However, We don't actually say what users are supposed to type here. Luckily, there is an attribute called placeholder that lets us add default text to our input, so users know what to type:
-<br>   
-<br>
-<br>
-&lt;input type="email" placeholder="Your email"&gt;</p>
-</div>
-
-
-
-
-<div class="mySlides fade">
-  <div class="numbertext">14/ 18</div>
-  <h1> Task 5</h1>
-<p> Add placeholder= "Your email" to the email input.
-</p></div>
-
-<div class="mySlides fade">
-  <div class="numbertext">15/ 18</div>
-<h1>HTML Links</h1>
-<p> HTML links are defined with the <a> tag:
-<br>
-<br>
-&lt;a href="https://www.nytimes.com/"&gt; This is a link &lt;/a&gt; 
-
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">16/ 18</div>
-  <h1> Task 6</h1>
-<p> Add a link to anything you want on your page.
-</p></div>
-
-<div class="mySlides fade">
-  <div class="numbertext">17/ 18</div>
-  <h1> Images</h1>
-<p> HTML images are defined with the &lt;img&gt; tag.
-
-The source file (src), alternative text (alt), width, and height are provided as attributes:
-<br>
-<br>
-
-&lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;
-
-</p></div>
-<div class="mySlides fade">
-  <div class="numbertext">18/ 18</div>
-  <h1> Task 7</h1>
-<p> Add an image to your page.
-</p></div>
 
 
 </div>
@@ -433,7 +408,7 @@ The source file (src), alternative text (alt), width, and height are provided as
 
 
 
-    <script src="assets/js/htmlEditor.js" charset="utf-8"></script>
+    <script src="assets/js/cssEditor.js" charset="utf-8"></script>
     <script src="assets/js/slides.js"></script>
     <script src="assets/js/script.js" charset="utf-8"></script>
     <script src="assets/js/menu.js" charset="utf-8"></script>
