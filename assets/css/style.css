@@ -37,7 +37,7 @@ i {
 h2 {
     text-align: center;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 30px;
     color: white;
     padding-top: 53px;
 }
@@ -91,11 +91,12 @@ h2 {
     background-color: #3498db;
 }
 
-.try-now-btn a {
-    text-decoration: none;
-    color: white;
-    margin: 9%;
-    display: inline-block;
+.try-now-btn a{
+  text-decoration: none;
+  color: white;
+  margin: 9%;
+  display: inline-block;
+  font-size: .9em;
 }
 
 #drop-down {
@@ -170,8 +171,8 @@ iframe#preview {
 }
 
 button.editor-button, button.editor-buttonEx {
-    height: 65px;
-    width: 284px;
+    height: 100%;
+    width: 35%;
     padding: 0;
     border-style: solid;
     border: 0;

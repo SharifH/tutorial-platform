@@ -10,10 +10,12 @@ body{
 
       }
 iframe {
-  width: 49%;
+  width: 48%;
   float: left;
   height: 300px;
   border: 1px solid gray;
   border-left: 0px;
   background-color: white;
+  
+
 }

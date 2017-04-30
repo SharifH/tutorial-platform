@@ -48,7 +48,7 @@ export default StyleSheet.create({
     "h2": {
         "textAlign": "center",
         "fontWeight": "bold",
-        "fontSize": 36,
+        "fontSize": 30,
         "color": "white",
         "paddingTop": 53
     },
@@ -122,7 +122,8 @@ export default StyleSheet.create({
         "marginRight": "9%",
         "marginBottom": "9%",
         "marginLeft": "9%",
-        "display": "inline-block"
+        "display": "inline-block",
+        "fontSize": 0.9
     },
     "drop-down": {
         "display": "none"
@@ -201,8 +202,8 @@ export default StyleSheet.create({
         "marginTop": -3
     },
     "buttoneditor-button": {
-        "height": 65,
-        "width": 284,
+        "height": "100%",
+        "width": "35%",
         "paddingTop": 0,
         "paddingRight": 0,
         "paddingBottom": 0,
@@ -218,8 +219,8 @@ export default StyleSheet.create({
         "marginLeft": "7%"
     },
     "buttoneditor-buttonEx": {
-        "height": 65,
-        "width": 284,
+        "height": "100%",
+        "width": "35%",
         "paddingTop": 0,
         "paddingRight": 0,
         "paddingBottom": 0,

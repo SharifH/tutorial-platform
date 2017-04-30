@@ -128,9 +128,9 @@ html, body, .container, .content-wrap {
 }
 
 .menu {
-    position: relative;
-    z-index: 1000;
-    padding: 3em 0em 0;
+	position: relative;
+	z-index: 1000;
+	padding: 3em 0em 0;
 }
 
 .menu, .close-button {
